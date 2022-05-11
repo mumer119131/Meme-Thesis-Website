@@ -49,7 +49,7 @@ def register_user(request):
             print("Saved")
             return redirect('home_page')
         else:
-            print("Invalid Form")
+            messages.error("Invalid Form")
 
     form = CustomUserCreationForm
     context = {'form': form}
